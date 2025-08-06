@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
+=======
+// ルーティングを設定するコントローラを宣言する
+use App\Http\Controllers\PostController;
+>>>>>>> 73a481d (最初のコミット)
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
+=======
+
+Route::get('/posts', [PostController::class, 'index']);
+>>>>>>> 73a481d (最初のコミット)
