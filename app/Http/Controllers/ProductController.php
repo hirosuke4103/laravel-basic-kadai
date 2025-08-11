@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\PostController;
 
 class PostController extends Controller
 {
@@ -15,6 +14,5 @@ class PostController extends Controller
 
         // 変数$productsをproducts/index.blade.phpファイルに渡す
         return view('posts.index', compact('products'));
-    }
+    } 
 }
-
