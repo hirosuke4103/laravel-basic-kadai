@@ -19,8 +19,8 @@
        @foreach($products as $product)
            <tr>
 
-               <td>{{ $product->title }}</td>
-               <td>{{ $product->content }}</td>
+               <td style="font-size: 14px;">{{ $product->title }}</td>
+               <td style="font-size: 14px;">{{ $product->content }}</td>
 
            </tr>            
        @endforeach       
