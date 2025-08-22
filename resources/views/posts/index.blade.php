@@ -9,22 +9,22 @@
     
      <h1>投稿一覧</h1>       
     
-        <table>
+    <table>
        <tr>
 
            <th>タイトル</th>
            <th>本文</th>
 
        </tr>
-       @foreach($products as $product)
+       @foreach($posts as $post)
            <tr>
 
-               <td style="font-size: 14px;">{{ $product->title }}</td>
-               <td style="font-size: 14px;">{{ $product->content }}</td>
+               <td style="font-size: 14px;">{{ $post->title }}</td>
+               <td style="font-size: 14px;">{{ $post->content }}</td>
 
            </tr>            
        @endforeach       
-   </table>
+    </table>
                                                               
 </body> 
                                                              

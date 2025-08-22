@@ -6,15 +6,24 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\PostController;
+use App\Models\Post;
 
 class PostController extends Controller
 {
     public function index() {
-        // productsテーブルからすべてのデータを取得し、変数$productsに代入する
-        $products = DB::table('products')->get();
+        // postsテーブルからすべてのデータを取得し、変数$productsに代入する
+        $posts = DB::table('posts')->get();
 
-        // 変数$productsをproducts/index.blade.phpファイルに渡す
-        return view('posts.index', compact('products'));
+        // 変数$postsをposts/index.blade.phpファイルに渡す
+        return view('posts.index', compact('posts'));
+    }
+
+    public function show($id) {
+        // URL'/posts/{id}'の'{id}'部分と主キー（idカラム）の値が一致するデータをpostsテーブルから取得し、変数$productに代入する
+        $post = Post::find($id);
+
+        // 変数$postをposts/show.blade.phpファイルに渡す
+        return view('posts.show', compact('posts'));
     }
 }
 
